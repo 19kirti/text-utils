@@ -15,21 +15,21 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = 'black';
       showAlert("Dark Mode has been enabled", "success");
-      document.title='Text-Utils Dark Mode';
+      //document.title='Text-Utils Dark Mode';
 
-      setInterval(() => {
-        document.title='Text-Utils is an amazing utility web-site';
-      }, 1500);
+      // setInterval(() => {
+      //   document.title='Text-Utils is an amazing utility web-site';
+      // }, 1500);
 
-      setInterval(() => {
-        document.title='Subscribe to Text-Utils';
-      }, 2000);
+      // setInterval(() => {
+      //   document.title='Subscribe to Text-Utils';
+      // }, 2000);
     }
     else {
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light Mode has been enabled", "success");
-      document.title='Text-Utils Light Mode';
+      //document.title='Text-Utils Light Mode';
     }
   }
 
@@ -57,7 +57,7 @@ function App() {
     <About mode ={mode} />
 
     <div className="container my-3">
-    <TextForm  heading="Enter the text to analyze below :) " mode={mode} showAlert={showAlert}/>
+    <TextForm  heading="Try TextUtils - Word Counter, Character Counter, upperCase lowerCase Converter :) " mode={mode} showAlert={showAlert}/>
     </div>
 
     {/* <div className="container my-2">
