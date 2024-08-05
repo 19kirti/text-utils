@@ -52,9 +52,9 @@ export default function TextForm(props) {
   <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="8" style={{backgroundColor: props.mode==='light' ? 'white' : 'black', color: props.mode==='light'? 'black' : 'white'}}></textarea>
 </div>
 
-<button className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to upperCase</button>
-<button className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to lowerCase</button>
-<button className="btn btn-secondary mx-1" onClick={handleClear}>Clear text</button>
+<button  className="btn btn-primary mx-1" onClick={handleUpClick}>Convert to upperCase</button>
+<button  className="btn btn-primary mx-1" onClick={handleLowClick}>Convert to lowerCase</button>
+<button disabled={text.length===0} className="btn btn-secondary mx-1" onClick={handleClear}>Clear text</button>
     </div>
 
     <div className="container my-3" style={{color: props.mode==='light'? 'black' : 'white'}}>
