@@ -5,6 +5,7 @@ import TextForm from './TextForm';
 import About from './About';
 import React , {useState} from "react";
 import Alert from './Alert';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
 
@@ -50,19 +51,22 @@ function App() {
 
   return (
     <>
-    <NavBar mode={mode} toggleMode={toggleMode} />
+    <Router>
 
+    <NavBar mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert}/>
 
-    <About mode ={mode} />
-
     <div className="container my-3">
-    <TextForm  heading="Try TextUtils - Word Counter, Character Counter, upperCase lowerCase Converter :) " mode={mode} showAlert={showAlert}/>
+    <Routes>
+
+      <Route exact path="/About" element={<About mode ={mode}/>}/> 
+    
+    <Route exact path="/" element={<TextForm  heading="Try TextUtils - Word Counter, Character Counter, upperCase lowerCase Converter :) " mode={mode} showAlert={showAlert}/>}/>
+    
+    </Routes>
     </div>
 
-    {/* <div className="container my-2">
-      <About/>
-    </div> */}
+    </Router>
 
 
     </>
